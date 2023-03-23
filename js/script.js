@@ -41,12 +41,12 @@ console.log(findMax(numbers))
 
 function findMin(numbers) {
    return numbers.reduce(
-      (acc, number) => (number > acc ? number : acc),
+      (acc, number) => (number < acc ? number : acc),
       numbers[0]
    )
 }
 
-console.log(findMax(numbers))
+console.log(findMin(numbers))
 
 for (let key in numbers) {
    let number = key
