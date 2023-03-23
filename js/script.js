@@ -26,9 +26,35 @@ console.log(food[2])
 
 const numbers = [1, 63, 2, 5, 276, 76, 776, 4, 56, 443, 607, 32, 503, 5089, 16, 441, 964, 9, 555]
 
-console.log(Math.max(...numbers))
+// console.log(Math.max(...numbers))
 
-console.log(Math.min(...numbers))
+// console.log(Math.min(...numbers))
+
+function findMax(numbers) {
+   return numbers.reduce(
+      (acc, number) => (number > acc ? number : acc),
+      numbers[0]
+   )
+}
+
+console.log(findMax(numbers))
+
+function findMin(numbers) {
+   return numbers.reduce(
+      (acc, number) => (number > acc ? number : acc),
+      numbers[0]
+   )
+}
+
+console.log(findMax(numbers))
+
+for (let key in numbers) {
+   let number = key
+   if (key > number) {
+      key = number
+   }
+   console.log(number)
+}
 
 let sum = 0
 
